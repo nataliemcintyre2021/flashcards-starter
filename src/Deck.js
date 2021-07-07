@@ -7,6 +7,10 @@ class Deck {
     return this.cards.length;
   }
 
+  changeCard(deck) {
+    this.cards.shift()
+  }
+
 }
 
 
