@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+
 const chai = require('chai');
 const expect = chai.expect;
 
@@ -57,9 +59,9 @@ describe('Round', function() {
 
   it('should return feedback based on guess', function() {
 
-    round.takeTurn('sea otter');
+    const result = round.takeTurn('sea otter');
 
-    expect(round.takeTurn('sea otter')).to.equal('correct!')
+    expect(result).to.equal('correct!')
 
   })
 

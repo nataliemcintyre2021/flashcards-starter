@@ -9,18 +9,19 @@ class Game {
     this.currentRound = round;
   }
 
-  printMessage(deck, round) {
-      console.log(`Welcome to FlashCards! You are playing with ${deck.countCards()} cards.
+  printMessage(deck) {
+    console.log(`Welcome to FlashCards! You are playing with ${deck.countCards()} cards.
 -----------------------------------------------------------------------`)
   }
 
   printQuestion(round) {
-      util.main(round);
+    util.main(round);
   }
 
   start() {
     var deck1 = new Deck(prototypeQuestions);
     var round1 = new Round(deck1);
+
     this.printMessage(deck1, round1);
     this.printQuestion(round1);
   }

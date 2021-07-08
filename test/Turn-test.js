@@ -7,13 +7,14 @@ const Card = require('../src/Card');
 describe('Turn', function() {
 
   it('should be a function', function() {
-    const turn = new Turn();
     expect(Turn).to.be.a('function');
   });
 
   it('should be instantiated with two arguments of string and card object', function() {
     const card = new Card(1, 'What type of data is this question?', ['array', 'string', 'number'], 'string');
     const turn = new Turn('array', card);
+
+    expect(turn).to.be.an.instanceof(Turn);
   })
 
   it('should return the guess upon returnGuess method', function() {
